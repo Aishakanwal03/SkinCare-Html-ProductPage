@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<!-- saved from url=(0116)https://www.rakuten.co.jp/com/rat/plugin/external/ral-iframe-rakuten.co.jp.html?o-id=https%3A%2F%2Fwww.rakuten.ne.jp -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=EUC-JP">
+    <meta name="robots" content="noindex, nofollow">
+<script>bazadebezolkohpepadr="38967657"</script><script type="text/javascript" src="./2529b80" defer=""></script></head>
+
+<body data-new-gr-c-s-check-loaded="14.994.0" data-gr-ext-installed="" class="vsc-initialized">
+    <script type="text/javascript">
+    (function() {
+        if (window == parent) {
+            return -1;
+        }
+
+        var acc = 461;
+        var aid = 1;
+        var ts = new Date().getTime().toString() + Math.floor(0x100000000 * Math.random()).toString(16);
+        var qs = encodeURIComponent('{"acc":' + acc + ',"aid":' + aid + ',"bid":"' + ts + '"}');
+        var imgTag = document.createElement('img');
+        imgTag.src = "//rat.rakuten.co.jp/?cpkg_none=" + qs;
+        imgTag.style = "width:2px;height:2px;display:none;visibility:hidden";
+        imgTag.addEventListener('load', function() {
+            init();
+        })
+        document.body.appendChild(imgTag);
+
+        var whiteList = [],
+            sessCk, persCk;
+
+        function getQueryParam(param) {
+            function getUrlVars() {
+                var vars = [],
+                    hash;
+                var hashes = decodeURIComponent(window.location.search).substring(1).split('&');
+                for (var i = 0; i < hashes.length; i++) {
+                    hash = hashes[i].split('=');
+                    vars.push(hash[0]);
+                    vars[hash[0]] = hash[1];
+                }
+                return vars;
+            }
+            var arr = getUrlVars();
+            return arr[param];
+        }
+        //parse cookie setting parameters
+        sessCk = getQueryParam('ckr') || 'Rp';
+        persCk = getQueryParam('ckp') || 'Rz';
+
+        //whitelist of domains where the message can be sent
+        whiteList = [
+            /^http[s]?:\/\/srdk\.rakuten\.jp$/,
+            /^http[s]?:\/\/edyviewer\.rakuten-edy\.co\.jp$/,
+            /^http[s]?:\/\/stg\.edyviewer\.rakuten-edy\.co\.jp$/,
+            /^http[s]?:\/\/travel\.rakuten\.(com|cn|fr)$/,
+            /^http[s]?:\/\/travel\.rakuten\.com\.(tw|hk|my|sg)$/,
+            /^http[s]?:\/\/travel\.rakuten\.co\.(kr|id|th)$/,
+            /^http[s]?:\/\/store\.jleague\.jp$/,
+            /^http[s]?:\/\/store-jleague\.faq\.rakuten\.ne\.jp$/,
+            /^http[s]?:\/\/rakuten\.e-gift\.co$/,
+            /^http[s]?:\/\/www\.rakuten-life\.co\.jp$/,
+            /^http[s]?:\/\/([-.\w]+\.)*fril\.jp$/,
+            /^http[s]?:\/\/([-.\w]+\.)*rakuten-bank\.co\.jp$/,
+            /^http[s]?:\/\/([-.\w]+\.)*rakuten-insurance\.co\.jp$/,
+            /^http[s]?:\/\/([-.\w]+\.)*viber\.co\.jp$/,
+            /^http[s]?:\/\/([-.\w]+\.)*viber\.com$/,
+            /^http[s]?:\/\/([^\?|;|#|&]*)\.rakuten-card\.co\.jp$/,
+            /^http[s]?:\/\/([^\?|;|#|&]*)\.rakuten-sec\.co\.jp$/,
+            /^http[s]?:\/\/([^\?|;|#|&]*)rental\.rakuten\.jp$/,
+            /^http[s]?:\/\/([^\?|;|#|&]*)developers\.rakuten\.com$/,
+            /^http[s]?:\/\/([^\?|;|#|&]*)rakuteneagles\.jp$/,
+            /^http[s]?:\/\/([^\?|;|#|&]*)eagles.\.allsports\.jp$/,
+            /^http[s]?:\/\/([^\?|;|#|&]*)rt\.tstar\.jp$/,
+            /^http[s]?:\/\/([^\?|;|#|&]*)eagles\.tstar\.jp$/,
+            /^http[s]?:\/\/([^\?|;|#|&]*)vissel\.tstar\.jp$/,
+            /^http[s]?:\/\/([^\?|;|#|&]*)vissel-kobe\.co\.jp$/,
+            /^http[s]?:\/\/([^\?|;|#|&]*)rakuten\.ne\.jp$/,
+            /^http[s]?:\/\/([^\?|;|#|&]*)nikki\.ne\.jp$/,
+            /^http[s]?:\/\/([^\?|;|#|&]*)stylife\.co\.jp$/,
+            /^http[s]?:\/\/([^\?|;|#|&]*)rakuma\.rakuten\.com\.tw$/,
+            /^http[s]?:\/\/([^\?|;|#|&]*)infoseek\.co\.jp$/,
+            /^http[s]?:\/\/([^\?|;|#|&]*)campaign\.rakuten\.jp$/,
+            /^http[s]?:\/\/([^\?|;|#|&]*)www\.rebates\.jp$/,
+            /^http[s]?:\/\/([^\?|;|#|&]*)rakuten\.happywoman\.jp$/,
+            /^http[s]?:\/\/([^\?|;|#|&]*)global\.rakuten\.com$/,
+            /^http[s]?:\/\/([^\?|;|#|&]*)rakuten-ron\.force\.com$/,
+            /^http[s]?:\/\/([^\?|;|#|&]*)f-rakuten-ron\.cs5\.force\.com$/,
+            /^http[s]?:\/\/([^\?|;|#|&]*)www\.rakuten\.us$/,
+            /^http[s]?:\/\/([^\?|;|#|&]*)capital\.rakuten\.com$/,
+            /^http[s]?:\/\/([^\?|;|#|&]*)rakutenghd1406254551\.zendesk\.com$/,
+            /^http[s]?:\/\/([^\?|;|#|&]*)intra\.rakuten-it\.com$/,
+            /^http[s]?:\/\/([^\?|;|#|&]*)www\.homes\.co\.jp$/,
+            /^http[s]?:\/\/([^\?|;|#|&]*)www\.goo-net\.com$/,
+            /^http[s]?:\/\/([^\?|;|#|&]*)gnavi\.co\.jp$/,
+            /^http[s]?:\/\/([^\?|;|#|&]*)biccamera\.com$/
+        ];
+
+        function getCookie(name) {
+            var cookieValue, cookies, cookie, i, len;
+            if (document.cookie) {
+                cookies = document.cookie.split('; ');
+                for (i = 0, len = cookies.length; i < len; i++) {
+                    cookie = cookies[i];
+                    if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                        break;
+                    }
+                }
+            }
+            return cookieValue;
+        }
+
+        function sendData(data) {
+            var receiver, str, parentUrl,
+                query, protocol, parentHost, matches, n, len;
+
+            receiver = window.parent;
+
+            dataObj = {
+                'type': 'ratCk',
+                'data': data
+            };
+            str = JSON && JSON.stringify(dataObj);
+            if (str) {
+                // Check the parent host
+                parentUrl = getQueryParam('o-id');
+                len = whiteList.length;
+                for (n = 0; n < len; n++) {
+                    if (parentUrl && parentUrl.match(whiteList[n])) {
+                        receiver.postMessage(str, parentUrl);
+                        break;
+                    }
+                }
+            }
+        }
+
+        function init() {
+            var data = {},
+                ckp, dataStr;
+            data.cks = getCookie(sessCk);
+            ckp = getCookie(persCk);
+            if (ckp) {
+                data.ckp = ckp;
+            }
+            sendData(data);
+        }
+        init();
+    })();
+    </script><img src="./saved_resource(1)" style="width: 2px; height: 2px; display: none; visibility: hidden;">
+<noscript><img src="https://www.rakuten.co.jp/akam/11/pixel_2529b80?a=dD05ZWEyNGZkN2M1MTVlMTcxM2RhMzlmN2E2MDczYWUyNjA1ZDhkOTU3JmpzPW9mZg==" style="visibility: hidden; position: absolute; left: -999px; top: -999px;" /></noscript>
+
+
+</body></html>

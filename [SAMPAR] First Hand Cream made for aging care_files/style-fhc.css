@@ -1,0 +1,159 @@
+/* Common */
+body {
+  background-color: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+a.a_scale {
+  display: inline-block;
+}
+
+a.a_scale:hover {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.bdr-b-dot-pk {
+  border-bottom: 2px dotted #ff84ae;
+}
+
+.bdr-b-dot-gy {
+  border-bottom: 2px dotted #aaa;
+}
+
+.pos-ab-r {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.fw-b {
+  font-weight: 600;
+}
+
+/* Block */
+
+main {
+  padding: 0;
+  margin: 0;
+}
+
+.img_wrapper img {
+  width: 100%;
+}
+
+.hero_wrapper {
+  background: url('../images/FHC/FHC_hero.jpg') no-repeat left/cover;
+  height: 600px;
+}
+
+.hero_product {
+  max-width: 350px;
+}
+
+.hero_title {
+  width: 500px;
+  max-width: 600px;
+}
+
+.victoire img {
+  max-height: 200px;
+}
+
+section {
+  margin-bottom: 100px;
+}
+
+section .section_child {
+  max-width: 1200px;
+  margin: auto;
+  padding: 3%;
+}
+
+section h3 {
+  background-color: #000;
+  color: #f7d7e1;
+  margin: 0;
+  padding: 5px 0 5px 3%;
+  font-size: 22px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.bg_repeater {
+  background: linear-gradient(rgba(255,255,255,.5) 0%, rgba(255,255,255,.5) 100%), url('../images/FHC/jasmines_roses.jpg') no-repeat left/cover;
+}
+
+.p-f_box {
+  padding: 2em;
+  background: rgba(255,255,255,.7);
+  height: 250px;
+}
+
+.bg_repeater .f_box-50:nth-child(odd) {
+  padding-left: 100px;
+}
+
+.bg_repeater .f_box-50:nth-child(even) {
+  padding-right: 100px;
+}
+
+
+/* Tablet & SP */
+@media screen and (max-width:768px) {
+  .hero_wrapper {
+    height: 450px;
+  }
+  
+  .hero_product {
+    width: 35%;
+  }
+  
+  .hero_title {
+    width: 60%;
+  }
+}/* Tablet & SP */
+
+
+/* SP only*/
+@media screen and (max-width:414px) {
+  .hero_wrapper {
+    height: 250px;
+  }
+  
+  .victoire {
+    text-align: center;
+  }
+    
+  section {
+    margin-bottom: 30px;
+  }
+  
+  section h3 {
+    font-size: 18px;
+  }
+    
+  .bg_repeater .f_box-50 {
+    padding: 1em;
+  }
+  
+  .bg_repeater .f_box-50:nth-child(odd) {
+    padding-left: 1em;
+  }
+  
+  .bg_repeater .f_box-50:nth-child(even) {
+    padding-right: 1em;
+  }
+  
+  .p-f_box {
+    height: auto;
+  }
+  
+  .step .w-75 {
+    width: 100%!important;
+  }
+  
+}/* SP only*/
